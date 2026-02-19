@@ -16,6 +16,10 @@ document.addEventListener('click', (event) => {
       nav.classList.remove('open');
       btn.setAttribute('aria-expanded', 'false');
     }
+document.querySelectorAll('.menu-toggle').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const nav = btn.parentElement.querySelector('nav');
+    nav.classList.toggle('open');
   });
 });
 
